@@ -1,0 +1,21 @@
+services:
+  app:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      - DATABASE_URL=postgresql://outbuildShedule_owner:x5vatgdbsW2u@ep-patient-rice-a5ltwllw.us-east-2.aws.neon.tech/outBuildTest?sslmode=require # Adjust this as needed
+      - JWT_SECRET=mysecret # Replace with your actual secret
+    depends_on:
+      - db
+
+  db:
+    image: postgres:13
+    restart: always
+    environment:
+      POSTGRES_USER: username
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: mydatabase_test # Adjust this as needed
+    ports:
+      - "5432:5432"
