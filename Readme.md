@@ -78,5 +78,5 @@ Endpoints for login and registration have been created, implementing a JWT syste
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/outbuild-test-project.git
+   git clone https://github.com/alejjandrotr/outBuildTest.git
    cd outbuild-test-project
